@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html> <head>
+    <link rel="stylesheet" href="INTERIOR_DECORATOR.css">
+    <title>CASSA DELA LUNA</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+     <div class="container">
+        <nav class="navbar">
+            <div class="navdiv">
+                
+                <ul>
+                    <li><a href="ANTIPASTI.html" style="text-decoration: none;">MENU</a></li>
+                    <li><a href="REVIEW.html" style="text-decoration: none;">REVIEW</a></li>
+                    <li><a href="INFORMATION.html" style="text-decoration: none;">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>    
+    </div>
+    <img src="cropped_pasta.png" class="forpasta">
+    <ul>
+    <li><h1 class="title">CASSA </h1></li>
+    <li><h1 class="title">DELA </h1></li>
+    <li><h1 class="title">LUNA </h1></li> 
+    </ul>
+    <div class="box"><p>This Italian restaurant only serves a variety of pure culture and delivers every meal
+with stunning quality and customer service. A truly unforgettable culinary experience
+for anyone who manages to take the delicacy atop the palate. We have a strict policy
+for our staff to adhere to, enforcing our high standards, to ensure an exceptional
+dining experience for our beloved customers</p></div>
+<img src="revi.png" class="box_small"> 
+</div>
+            <div class="navdiv2">
+                <ul>
+                    <li><img src="arrowL.png" class="reload-btn" alt="Click to refresh">
+                    <li><img src="Reviews.png" class="rev">
+                    <li><img src="arrowR.png" class="reload-btn" alt="Click to refresh">
+                </ul>
+            </div>  
+
+
+
+<script>
+  const imageButtons = document.querySelectorAll('.reload-btn');
+
+  imageButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+      localStorage.setItem('scrollPosition', window.scrollY);
+      
+      location.reload();
+    });
+  });
+
+
+  window.addEventListener('load', () => {
+    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    
+    if (savedScrollPosition) {
+
+      window.scrollTo(0, parseInt(savedScrollPosition, 10));
+      
+      localStorage.removeItem('scrollPosition');
+    }
+  });
+</script>
+</body>
+</html>
