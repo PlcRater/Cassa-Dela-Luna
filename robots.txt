@@ -1,0 +1,3 @@
+User-agent
+Allow:/
+Sitemap:https://plcrater.github.io/Cassa-Dela-Luna/CASSA_DELA_LUNA.html/Sitemap.xml
